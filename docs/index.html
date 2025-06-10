@@ -1,18 +1,382 @@
 <!DOCTYPE html>
+<html lang="ru">
 <head>
-  <title>Лятти Алексей - Разработчик/DevOps</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лятти Алексей - Разработчик/DevOps</title>
+		
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    <style>
+        :root {
+            --primary-color: #4e73df;
+            --secondary-color: #2e59d9;
+            --accent-color: #36b9cc;
+        }
+        
+        body {
+            background-color: #f8f9fc;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        .profile-header {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 3rem 0;
+            margin-bottom: 2rem;
+            border-radius: 0 0 20px 20px;
+        }
+        
+        .avatar {
+            width: 150px;
+            height: 150px;
+            border: 4px solid white;
+            box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+        }
+        
+        .section-title {
+            color: var(--secondary-color);
+            border-bottom: 2px solid var(--accent-color);
+            padding-bottom: 0.5rem;
+            margin-bottom: 1.5rem;
+            font-weight: 600;
+        }
+        
+        .skill-badge {
+            background-color: #e6e9ff;
+            color: var(--primary-color);
+            font-weight: 500;
+            margin: 0.25rem;
+            padding: 0.5rem 1rem;
+        }
+        
+        .project-card {
+            transition: transform 0.3s, box-shadow 0.3s;
+            height: 100%;
+            border: none;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 0.15rem 1.75rem rgba(0, 0, 0, 0.1);
+        }
+        
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 0.5rem 2rem rgba(0, 0, 0, 0.15);
+        }
+        
+        .project-card .card-img-top {
+            height: 180px;
+            object-fit: cover;
+            border-bottom: 1px solid rgba(0,0,0,0.1);
+        }
+        
+        .project-card .tech-badge {
+            background-color: var(--accent-color);
+            color: white;
+            font-size: 0.8rem;
+						padding: 0 0.8rem;
+        }
+        
+        .contact-icon {
+            width: 50px;
+            height: 50px;
+            background-color: var(--primary-color);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            margin-right: 1rem;
+        }
+        
+        .timeline {
+            position: relative;
+            padding-left: 2rem;
+            border-left: 2px solid var(--accent-color);
+        }
+        
+        .timeline-item {
+            position: relative;
+            margin-bottom: 2rem;
+        }
+        
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -2.6rem;
+            top: 0.3rem;
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            background-color: var(--primary-color);
+            border: 3px solid white;
+        }
+        
+        footer {
+            background-color: #2e59d9;
+            color: white;
+            padding: 2rem 0;
+            margin-top: 3rem;
+        }
+        
+        @media (max-width: 768px) {
+            .avatar {
+                width: 120px;
+                height: 120px;
+            }
+            
+            .profile-header {
+                padding: 2rem 0;
+            }
+        }
+    </style>
 </head>
 <body>
-  <div class="container">
-    <header>
-      <h1>Лятти Алексей</h1>
-      <h2>Go/Python Developer | DevOps Engineer</h2>
+
+    <header class="profile-header text-center">
+        <div class="container">
+            <img src="images/avatar.jpeg" alt="Фото профиля" class="avatar rounded-circle mb-3">
+            <h1 class="display-4 fw-bold">Лятти Алексей</h1>
+            <p class="lead">Go/Python Developer | DevOps Engineer</p>
+            <div class="d-flex justify-content-center gap-3 mt-4">
+                <a href="mailto:leshka189@gmail.com" class="btn btn-light btn-lg rounded-pill px-4">
+                    <i class="bi bi-envelope me-2"></i>Написать
+                </a>
+                <a href="https://t.me/quigon189" class="btn btn-outline-light btn-lg rounded-pill px-4">
+                    <i class="bi bi-telegram me-2"></i>Telegram
+                </a>
+            </div>
+        </div>
     </header>
-    <hr>
-    <main>
-      <h3>Обо мне:</h3>
-      <p>Преподаватель с 7-летним опытом ведения IT-дисциплин</p>  
-    </main>
-  </div>
+
+    <div class="container">
+        <!-- Обо мне -->
+        <section class="mb-5">
+            <h2 class="section-title">Обо мне</h2>
+            <div class="row">
+                <div class="col-lg-8">
+									<p>Имею 7-летний опыт преподавания IT-дисциплин.</p>
+									<p>Веду дисциплины в СПО по специальности "Сетевой и системное администрирование", такие как:</p>
+										<ul>
+											<li>Операционные системы и среды</li>
+											<li>Информатика и информационные технологии</li>
+											<li>Основы баз данных</li>
+											<li>Технологии физического уровня передачи данных</li>
+											<li>Эксплуатация объектов сетевой инфраструктуры</li>
+											<li>И другие...</li>
+										</ul>
+                    <p>Имею теоретический и небольшой практический опыт разработки полного цикла: от проектирования архитектуры до развертывания в Kubernetes. Стремлюсь применять навыки (в том числе и педагогические) для эффективной работы в команде и решения сложных технических задач.</p>
+                </div>
+                <div class="col-lg-4">
+                    <div class="card border-0 shadow">
+                        <div class="card-body">
+                            <h5 class="card-title"><i class="bi bi-info-circle me-2"></i>Основная информация</h5>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item d-flex">
+																	<span class="fw-bold me-2">Локация:</span>
+																	Петрозаводск, Республика Карелия
+                                </li>
+                                <li class="list-group-item d-flex">
+                                    <span class="fw-bold me-2">Опыт:</span>
+                                    7+ лет (преподавание)
+                                </li>
+                                <li class="list-group-item d-flex">
+                                    <span class="fw-bold me-2">Готовность:</span>
+                                    Полная занятость, частичная занятость, полный день, удалённо
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Навыки -->
+        <section class="mb-5">
+            <h2 class="section-title">Технические навыки</h2>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100 project-card">
+                        <div class="card-body">
+                            <h5 class="card-title text-primary"><i class="bi bi-code-slash me-2"></i>Разработка</h5>
+                            <div class="d-flex flex-wrap mt-3">
+                                <span class="skill-badge rounded-pill">Go</span>
+                                <span class="skill-badge rounded-pill">Python (Flask, Pydantic)</span>
+                                <span class="skill-badge rounded-pill">REST API</span>
+                                <span class="skill-badge rounded-pill">PostgreSQL</span>
+                                <span class="skill-badge rounded-pill">JWT</span>
+                                <span class="skill-badge rounded-pill">SQL</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100 project-card">
+                        <div class="card-body">
+                            <h5 class="card-title text-primary"><i class="bi bi-gear me-2"></i>DevOps</h5>
+                            <div class="d-flex flex-wrap mt-3">
+                                <span class="skill-badge rounded-pill">Docker/Podman</span>
+                                <span class="skill-badge rounded-pill">Kubernetes (k3s)</span>
+                                <span class="skill-badge rounded-pill">Git/GitHub</span>
+                                <span class="skill-badge rounded-pill">Ansible</span>
+                                <span class="skill-badge rounded-pill">Linux</span>
+                                <span class="skill-badge rounded-pill">Bash</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100 project-card">
+                        <div class="card-body">
+                            <h5 class="card-title text-primary"><i class="bi bi-people me-2"></i>Soft Skills</h5>
+                            <div class="d-flex flex-wrap mt-3">
+                                <span class="skill-badge rounded-pill">Преподавание</span>
+                                <span class="skill-badge rounded-pill">Менторинг</span>
+                                <span class="skill-badge rounded-pill">Документирование</span>
+                                <span class="skill-badge rounded-pill">Командная работа</span>
+                                <span class="skill-badge rounded-pill">Адаптивность</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Портфолио проектов -->
+        <section class="mb-5">
+            <h2 class="section-title">Портфолио проектов</h2>
+            <div class="row g-4">
+                <!-- Проект 1 -->
+                <div class="col-lg-6">
+                    <div class="card project-card">
+                        <div class="card-body">
+                            <h3 class="card-title">Depot</h3>
+														<hr>
+                            <div class="d-flex flex-wrap mb-3">
+                                <span class="tech-badge rounded-pill me-2">Go</span>
+                                <span class="tech-badge rounded-pill me-2">Python</span>
+                                <span class="tech-badge rounded-pill me-2">PostgreSQL</span>
+                                <span class="tech-badge rounded-pill me-2">Kubernetes</span>
+                            </div>
+                            <p class="card-text">Микросервисное веб-приложение для управления учебными данными колледжа с возможностью импорта из Excel и автоматическим развертыванием в k3s.</p>
+                            <ul class="mb-3">
+                                <li>JWT-аутентификация на Go</li>
+                                <li>REST API для работы с учебными сущностями</li>
+                                <li>Flask фронтенд с Bootstrap</li>
+                                <li>Автоматизация деплоя через Makefile</li>
+                            </ul>
+                            <div class="d-flex gap-2">
+                                <a href="https://github.com/quigon189/depot" class="btn btn-primary">
+                                    <i class="bi bi-github me-1"></i> Исходный код
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Проект 2 -->
+                <div class="col-lg-6">
+                    <div class="card project-card">
+                        <div class="card-body">
+														<h3 class="card-title">409 Automation Toolkit</h3>
+														<hr>
+														<div class="d-flex flex-wrap mb-3">
+                                <span class="tech-badge rounded-pill me-2">Bash</span>
+                                <span class="tech-badge rounded-pill me-2">Ansible</span>
+                                <span class="tech-badge rounded-pill me-2">Kubernetes</span>
+                            </div>
+                            <p class="card-text">Набор скриптов, конфигураций и Ansible-Playbooks для автоматизации развертывания приложений в Лаборатории 409 ПФ ПГУПС.</p>
+                            <ul class="mb-3">
+                                <li>Автоматизация создания пользователей и инициализации рабочего места</li>
+                                <li>Автоматизация подключения ПК к сетевым папкам</li>
+                                <li>Автоматизация добавления k3s-worker node</li>
+                            </ul>
+                            <div class="d-flex gap-2">
+                                <a href="https://github.com/quigon189/lab409.toolkit" class="btn btn-primary">
+                                    <i class="bi bi-github me-1"></i> Исходный код
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Опыт работы и образование -->
+        <section class="mb-5">
+            <div class="row">
+                <div class="col-lg-6 mb-4">
+                    <h2 class="section-title">Опыт работы</h2>
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <h5>Преподаватель IT-дисциплин</h5>
+                            <p class="text-muted">Петрозаводский филиал ПГУПС | 2017-2025</p>
+                            <ul>
+                                <li>Разработка и уточнение учебных программ</li>
+                                <li>Подготовка и проведение лабораторных и практических работ</li>
+                                <li>Руководство студенческими дипломными проектами</li>
+                                <li>Внедрение практических кейсов в учебный процесс</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-6">
+                    <h2 class="section-title">Образование</h2>
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <h5>ПетрГУ | Специалитет</h5>
+														<p class="text-muted">2010-2015</p>
+                            <p>Специализация: Физическая электроника</p>
+                        </div>
+                        
+                        <div class="timeline-item">
+                            <h5>Курсы повышения квалификации</h5>
+                            <p class="text-muted">2022-2023</p>
+                            <ul>
+                                <li>Инженер данных (ООО "1Т")</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Контакты -->
+    <footer class="text-center">
+        <div class="container">
+            <h2 class="mb-4">Свяжитесь со мной</h2>
+            <div class="d-flex flex-wrap justify-content-center gap-4 mb-4">
+                <a href="mailto:leshka189@gmail.com" class="text-white text-decoration-none d-flex align-items-center">
+                    <div class="contact-icon">
+                        <i class="bi bi-envelope"></i>
+                    </div>
+                    <span>leshka189@gmail.com</span>
+                </a>
+                
+                <a href="https://t.me/quigon189" class="text-white text-decoration-none d-flex align-items-center">
+                    <div class="contact-icon">
+                        <i class="bi bi-telegram"></i>
+                    </div>
+                    <span>@quigon189</span>
+                </a>
+                
+                <a href="https://github.com/quigon189" class="text-white text-decoration-none d-flex align-items-center">
+                    <div class="contact-icon">
+                        <i class="bi bi-github"></i>
+                    </div>
+                    <span>github.com/quigon189</span>
+                </a>
+                
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+</html>
